@@ -68,6 +68,7 @@ alias hup='kill -HUP'
 #alias lsig='{i=1; for s in $(kill -l); print ${(l:2:)$((i++))} $s}'
 alias lsig='{ i=1; for s in $(kill -l); printf "%2d %s\n" $((i++)) $s }'
 alias zlove='man zsh-lovers'
+alias sshkc='eval $(keychain --eval id_rsa --nogui)'
 
 # Global aliases
 alias -g L="| less"
