@@ -26,3 +26,10 @@ fmod() {
     #print -l $r
 }
 
+
+# Toggle deadkey
+tdk() {
+    xmodmap -pke |grep \ 35\ =\ dead_diaeresis &>/dev/null \
+    && xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'  && echo 'deadkey off' \
+    || ( xmodmap -e 'keycode 35 = dead_diaeresis dead_circumflex dead_diaeresis dead_circumflex dead_tilde dead_caron dead_tilde' && echo deadkey on )
+}
