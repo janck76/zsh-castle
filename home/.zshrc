@@ -125,8 +125,9 @@ bindkey '\e[8~' end-of-history
 bindkey '\e^M'  self-insert-unmeta
 # Ekspander history (!!) automatisk ved space
 bindkey " " magic-space
-# Repeter forrige kommando, og erstatt argN (vha søk og erstatt)
-bindkey -s '^xc' '\t\^¦\eI\^\t\e\$F¦xi'
+# Repeter forrige kommando, søk og erstatt: $ <word><TAB><CTRL+X>c
+bindkey -s '^xc' '\^¦\eI\^\t\e\$F¦xi'
+#bindkey -s '^xc' '\t\^¦\eI\^\t\e\$F¦xi'
 # Eks, erstatt arg2  (* cursor pos)
 # $ echo arg1 arg2 arg3
 # $ arg1 arg3 arg3
@@ -171,3 +172,5 @@ autoload -U age
 zmodload zsh/stat
 
 
+# Disable deadkey, and change it so ~ is the default key
+xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'
