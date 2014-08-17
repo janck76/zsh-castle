@@ -71,6 +71,18 @@ alias zlove='man zsh-lovers'
 alias kc='eval $(keychain --eval id_rsa --nogui)'
 alias rs='rsync -avh --progress'
 
+# Git aliases
+alias gst='git status '
+alias gad='git add '
+alias gbr='git branch '
+alias gcom='git commit'
+alias gdif='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+alias gl='git log '
+alias glo='git log --oneline'
+
 
 # Global aliases
 alias -g L="| less"
