@@ -174,3 +174,8 @@ zmodload zsh/stat
 
 # Disable deadkey, and change it so ~ is the default key
 xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'
+
+
+[[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
+
+
