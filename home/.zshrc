@@ -4,6 +4,8 @@ export ZSH=$HOME/.oh-my-zsh
 export TERM=rxvt-unicode-256color
 
 export RECOLL_CONFDIR=$HOME/.recoll
+
+export MYGIT=git@github.com:janck76/
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
