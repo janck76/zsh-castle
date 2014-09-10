@@ -70,6 +70,7 @@ alias lsig='{ i=1; for s in $(kill -l); printf "%2d %s\n" $((i++)) $s }'
 alias zlove='man zsh-lovers'
 alias kc='eval $(keychain --eval id_rsa --nogui)'
 alias rs='rsync -avh --progress'
+alias usbstat='echo Autosuspend status \(auto/on\); for d in /sys/bus/usb/devices/[0-9]* ; do if [[ -e $d/product ]] ; then echo -e "`basename $d`\t`cat $d/power/control`\t`cat $d/speed`\t`cat $d/product`" ; fi ; done'
 
 # Git aliases
 alias gst='git status '
@@ -82,6 +83,14 @@ alias gk='gitk --all&'
 alias gx='gitx --all'
 alias gl='git log '
 alias glo='git log --oneline'
+
+# systemctl aliases
+alias sc=systemctl
+alias scr='systemctl restart'
+alias scs='systemctl start'
+alias scx='systemctl stop'
+alias sci='systemctl status'
+alias scu='systemctl suspend'
 
 
 # Global aliases
