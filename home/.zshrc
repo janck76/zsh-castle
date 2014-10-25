@@ -1,7 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
-export TERM=rxvt-unicode-256color
+#export TERM=rxvt-unicode-256color
+eval `tset -s rxvt-unicode-256color`
 
 export RECOLL_CONFDIR=$HOME/.recoll
 
@@ -18,6 +19,7 @@ ZSH_THEME="robbyrussell"
 #ZSH_THEME="norm"
 #ZSH_THEME="pygmalion"
 #ZSH_THEME="pure"
+[[ -f ~/.zshrc_theme ]] && source ~/.zshrc_theme
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -27,7 +29,7 @@ ZSH_THEME="robbyrussell"
 # CASE_SENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
@@ -42,12 +44,12 @@ ZSH_THEME="robbyrussell"
 # DISABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -66,7 +68,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export DOC=$HOME/nasenoff_janck/documents
 
 export PATH=$HOME/.gem/ruby/2.1.0/bin:$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -91,7 +92,7 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 #
 
 
-export DEFAULT_USER=janck
+export DEFAULT_USER=$USER
 
 
 # tmux
@@ -169,15 +170,15 @@ setopt -o rc_quotes # Tillat quoting vha '', ekse echo 'hello ''world'''
 
 
 # Autoload functions
-autoload zmv
-autoload -U age
+#autoload zmv
+#autoload -U age
 
 
 # Load modules
-zmodload zsh/stat
+#zmodload zsh/stat
 
 
-# Disable deadkey, and change it so ~ is the default key
+# Disable deadkey (^¨~), and make ~ default
 xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'
 
 
