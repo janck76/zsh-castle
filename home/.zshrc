@@ -179,7 +179,7 @@ setopt -o rc_quotes # Tillat quoting vha '', ekse echo 'hello ''world'''
 
 
 # Disable deadkey (^¨~), and make ~ default
-xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'
+[[ ! -z $DISPLAY ]] && xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'
 
 
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
