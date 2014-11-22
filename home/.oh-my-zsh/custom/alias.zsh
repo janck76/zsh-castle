@@ -43,9 +43,8 @@ alias tx='tx3'
 alias tx2='tmux source-file ~/.tmux/2panes \; attach'
 alias tx3='tmux source-file ~/.tmux/3panes \; attach'
 alias tx4='tmux source-file ~/.tmux/4panes \; attach'
-alias wicd='wicd-curses'
-alias wol_brum='wol -h brum 4C:60:DE:24:DA:58'
-alias wol_nasenoff='wol -h nasenoff 4C:60:DE:24:9F:94'
+alias wol_brum='wol 4C:60:DE:24:DA:58'
+alias wol_nasenoff='wol 4C:60:DE:24:9F:94'
 alias omz='cd ~/.oh-my-zsh/'
 alias pdf='zathura --fork'
 alias xrdm='xrdb -merge ~/.Xresources'
@@ -61,6 +60,8 @@ alias ecm='ecryptfs-mount-private'
 alias ecu='ecryptfs-umount-private'
 # PDF books
 alias pdfzsh='zathura --fork "$HOME/Dropbox/Books/Linux/From Bash to Z Shell.pdf"'
+alias zatc='zathura -c /tmp --fork'
+alias zat='zathura --fork'
 alias zref="$HOME/janck76@gmail.com/Linux/howto/zsh/zsh_refcard.pdf"
 alias stp='kill -STOP'
 alias cnt='kill -CONT'
@@ -71,6 +72,7 @@ alias zlove='man zsh-lovers'
 alias kc='eval $(keychain --eval id_rsa --nogui)'
 alias rs='rsync -avh --progress'
 alias usbstat='echo Autosuspend status \(auto/on\); for d in /sys/bus/usb/devices/[0-9]* ; do if [[ -e $d/product ]] ; then echo -e "`basename $d`\t`cat $d/power/control`\t`cat $d/speed`\t`cat $d/product`" ; fi ; done'
+alias lj='$DOC/../linux_journal/1994_2013/start_linux.sh'
 alias bc='bc -l'
 
 # Git aliases
@@ -105,6 +107,7 @@ alias -g C="| wc -l"
 alias -g X="| xargs"
 alias -g X0="| xargs -0"
 alias -g G="| pcregrep"
+alias -g GV="| pcregrep -v"
 alias -g PE="| perl -e"
 # Konverter første kolonne fra KB til GB
 alias -g K2G='| perl -e ''grep { if ( /^(\d+)\s+(.*)/ ) { printf "%6.2fG \%s\n", $1/1024/1024, $2 } } sort { $a <=> $b} <STDIN>'''
