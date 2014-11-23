@@ -93,7 +93,7 @@ alias scr='systemctl restart'
 alias scs='systemctl start'
 alias scx='systemctl stop'
 alias sci='systemctl status'
-alias scu='systemctl suspend'
+alias scu='systemctl --user'
 
 
 # Global aliases
