@@ -74,7 +74,8 @@ alias rs='rsync -avh --progress'
 alias usbstat='echo Autosuspend status \(auto/on\); for d in /sys/bus/usb/devices/[0-9]* ; do if [[ -e $d/product ]] ; then echo -e "`basename $d`\t`cat $d/power/control`\t`cat $d/speed`\t`cat $d/product`" ; fi ; done'
 alias lj='$DOC/../linux_journal/1994_2013/start_linux.sh'
 alias bc='bc -l'
-
+alias synergys='sudo systemctl start synergys@janck' 
+alias xhd=/usr/local/bin/xhdmi
 # Git aliases
 alias gst='git status '
 alias gad='git add '
