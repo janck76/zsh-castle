@@ -10,6 +10,7 @@ export MYGIT=git@github.com:janck76/
 
 export RUBYLIB=.:./lib
 
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -185,3 +186,4 @@ fi
 
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
 
+unset GREP_OPTIONS
