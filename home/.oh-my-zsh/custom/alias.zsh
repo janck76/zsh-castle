@@ -76,6 +76,8 @@ alias lj='$DOC/../linux_journal/1994_2013/start_linux.sh'
 alias bc='bc -l'
 alias synergys='sudo systemctl start synergys@janck' 
 alias xhd=/usr/local/bin/xhdmi
+alias pkg-update_all='packer --quickcheck|grep -v linux-ck|xargs -I{} -n1 yaourt -S {} --noconfirm'
+
 # Git aliases
 alias gst='git status '
 alias gad='git add '

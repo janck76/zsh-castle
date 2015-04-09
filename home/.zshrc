@@ -70,7 +70,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 
-export PATH=$HOME/.gem/ruby/2.1.0/bin:$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
+export PATH=$HOME/.gem/ruby/2.2.0/bin:$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 export CDPATH=~
 
@@ -180,7 +180,7 @@ setopt -o rc_quotes # Tillat quoting vha '', ekse echo 'hello ''world'''
 
 
 # Disable deadkey (^¨~), and make ~ default
-if [ -n $DISPLAY ]; then
+if [[ $DISPLAY =~ :0 ]]; then
    xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'
 fi
 
