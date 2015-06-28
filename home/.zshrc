@@ -178,6 +178,7 @@ setopt -o rc_quotes # Tillat quoting vha '', ekse echo 'hello ''world'''
 # Load modules
 #zmodload zsh/stat
 
+setxkbmap no
 
 # Disable deadkey (^¨~), and make ~ default
 if [[ $DISPLAY =~ :0 ]]; then
