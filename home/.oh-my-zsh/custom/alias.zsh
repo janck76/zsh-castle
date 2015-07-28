@@ -125,5 +125,4 @@ alias -s pdf='zathura --fork'
 alias -s html=friefox
 alias -s txt=vim
 
-
-
+alias gvimruby='eval $(echo gvim $(for f in $(ls **/*.rb); do echo -e "$f";done))'
