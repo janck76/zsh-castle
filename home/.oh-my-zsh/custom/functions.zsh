@@ -33,3 +33,9 @@ tdk() {
     && xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'  && echo 'deadkey off' \
     || ( xmodmap -e 'keycode 35 = dead_diaeresis dead_circumflex dead_diaeresis dead_circumflex dead_tilde dead_caron dead_tilde' && echo deadkey on )
 }
+
+
+source_keychain() {
+    /usr/bin/keychain -q $(print $HOME/.ssh/id_*~*pub*)
+    source $HOME/.keychain/${HOST}-sh
+}
