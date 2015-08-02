@@ -1,4 +1,3 @@
-alias uke='date +%V'
 alias s='sudo'
 alias cal='cal -m -3'
 alias ck='echo con kolivas'
