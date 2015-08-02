@@ -114,6 +114,9 @@ ZSH_TMUX_AUTOCONNECT=true
 autoload -U run-help
 HELPDIR=~/zsh-help
 
+# Custom completion dir
+fpath=($HOME/.zsh_custom/completions $fpath)
+
 # Key bindings (testet i urxvt), man zshzle for mer info
 #
 #
