@@ -10,62 +10,115 @@ export MYGIT=git@github.com:janck76/
 
 export RUBYLIB=.:./lib
 
+# oh-my-zsh vars
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
-#ZSH_THEME="agnoster"
-#ZSH_THEME="norm"
-#ZSH_THEME="pygmalion"
-#ZSH_THEME="pure"
-[[ -f ~/.zshrc_theme ]] && source ~/.zshrc_theme
-
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to disable command auto-correction.
-# DISABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
+# --------------
+# antigen
+# https://github.com/zsh-users/antigen
+# 
+# Commands
+# update
+# revert
+# selfupdate
+# bundle
+# bundles
+# list
+# cleanup
+# use
+# theme
+# apply
+# snapshot
+# restore
+# :w
 
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+source $HOME/antigen/antigen.zsh
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+antigen use oh-my-zsh
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# Bundles from the default repo (robbyrussell's oh-my-zsh).
+antigen bundles <<EOFBUNDLE
+git
+heroku
+pip
+lein
+command-not-found
+vi-mode
+tmux
+archlinux
+EOFBUNDLE
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(vi-mode tmux zsh-syntax-highlighting archlinux)
+#   plugins=(vi-mode tmux zsh-syntax-highlighting archlinux)
+#
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-source $ZSH/oh-my-zsh.sh
+# Load the theme.
+antigen theme robbyrussell
+
+# Custom stuff
+antigen bundle $HOME/.zsh_custom
+antigen bundle $HOME/.zsh_custom/completions
+
+# Tell antigen that you're done.
+antigen apply
+
+
+#   # Set name of the theme to load.
+#   # Look in ~/.oh-my-zsh/themes/
+#   # Optionally, if you set this to "random", it'll load a random theme each
+#   # time that oh-my-zsh is loaded.
+#   ZSH_THEME="robbyrussell"
+#   #ZSH_THEME="agnoster"
+#   #ZSH_THEME="norm"
+#   #ZSH_THEME="pygmalion"
+#   #ZSH_THEME="pure"
+#   [[ -f ~/.zshrc_theme ]] && source ~/.zshrc_theme
+#   
+#   # Example aliases
+#   # alias zshconfig="mate ~/.zshrc"
+#   # alias ohmyzsh="mate ~/.oh-my-zsh"
+#   
+#   # Uncomment the following line to use case-sensitive completion.
+#   # CASE_SENSITIVE="true"
+#   
+#   # Uncomment the following line to disable bi-weekly auto-update checks.
+#   DISABLE_AUTO_UPDATE="true"
+#   
+#   # Uncomment the following line to change how often to auto-update (in days).
+#   # export UPDATE_ZSH_DAYS=1
+#   
+#   # Uncomment the following line to disable colors in ls.
+#   # DISABLE_LS_COLORS="true"
+#   
+#   # Uncomment the following line to disable auto-setting terminal title.
+#   # DISABLE_AUTO_TITLE="true"
+#   
+#   # Uncomment the following line to disable command auto-correction.
+#   # DISABLE_CORRECTION="true"
+#   
+#   # Uncomment the following line to display red dots whilst waiting for completion.
+#   COMPLETION_WAITING_DOTS="true"
+#   
+#   # Uncomment the following line if you want to disable marking untracked files
+#   # under VCS as dirty. This makes repository status check for large repositories
+#   # much, much faster.
+#   DISABLE_UNTRACKED_FILES_DIRTY="true"
+#   
+#   # Uncomment the following line if you want to change the command execution time
+#   # stamp shown in the history command output.
+#   # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+#   # HIST_STAMPS="mm/dd/yyyy"
+#   
+#   # Would you like to use another custom folder than $ZSH/custom?
+#   # ZSH_CUSTOM=/path/to/new-custom-folder
+#   
+#   # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+#   # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+#   # Example format: plugins=(rails git textmate ruby lighthouse)
+#   plugins=(vi-mode tmux zsh-syntax-highlighting archlinux)
+#   
+#   source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
