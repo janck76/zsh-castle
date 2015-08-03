@@ -98,6 +98,8 @@ alias scs='systemctl start'
 alias scx='systemctl stop'
 alias sci='systemctl status'
 alias scu='systemctl --user'
+alias jc='journalctl'
+alias jcx='journalctl -xe'
 
 
 # Global aliases
