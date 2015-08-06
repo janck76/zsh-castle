@@ -38,20 +38,21 @@ antigen use oh-my-zsh
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundles <<EOFBUNDLE
-git
-heroku
-pip
-lein
-command-not-found
-vi-mode
-tmux
 archlinux
+command-not-found
+git
+systemd
+tmux
+tmuxinator
+vi-mode
+zsh_reload
 EOFBUNDLE
 
-#   plugins=(vi-mode tmux zsh-syntax-highlighting archlinux)
-#
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
+
+# Additional completion definitions for Zsh.
+antigen bundle zsh-users/zsh-completions src 
 
 # Load the theme.
 antigen theme robbyrussell
