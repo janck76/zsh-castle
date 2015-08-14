@@ -109,6 +109,7 @@ alias -g S="| sort"
 alias -g SN="| sort --numeric-sort"
 alias -g SH="| sort --human-numeric-sort" # Kb, Mb, Gb
 alias -g T="| tail"
+alias -g TF="| tail -f"
 alias -g C="| wc -l"
 alias -g X="| xargs"
 alias -g X0="| xargs -0"
