@@ -161,12 +161,6 @@ bindkey -M menuselect '\C-o' accept-and-menu-complete
 setopt interactive_comments
 
 
-
-# put new dir on the dirstck with cd or auto_cd
-setopt auto_pushd
-# dir is never put more than once on the stack
-setopt pushd_ignore_dups
-
 setopt extended_glob
 
 # Nyttige rc shell opsjoner
@@ -189,6 +183,35 @@ if [[ $DISPLAY =~ :0 ]]; then
     xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'
 fi
 
+# Remember the dirstack last visited folders
+# put new dir on the dirstck with cd or auto_cd
+setopt auto_pushd pushdsilent pushdtohome 
+
+# Remove duplicate enries
+setopt pushdignoredups
+
+# Reverts the +/- operators
+setopt pushdminus
+
+DIRSTACKFILE="$HOME/.cache/zsh/dirs"
+[[ -d $DIRSTACKFILE/.. ]] || mkdir -p ${DIRSTACKFILE:s/dirs//}
+if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
+  dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
+  # [[ -d $dirstack[1] ]] && cd $dirstack[1]
+  # Av en eller anne grunn kommer $HOME med 2 ganger i dirstack
+  # Fix:
+  pushd $HOME
+  popd
+  cd $HOME
+fi
+chpwd() {
+  print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
+}
+
+DIRSTACKSIZE=20
+
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
 
 unset GREP_OPTIONS
+
+
