@@ -12,7 +12,6 @@ export ZSH=$HOME/.oh-my-zsh
 export MYGIT=git@github.com:janck76/
 export OMM='origin/master..master'
 export MOM='master..origin/master'
-export OM='origin master'
 
 # oh-my-zsh vars
 
