@@ -3,12 +3,16 @@ eval `tset -s rxvt-unicode-256color`
 
 export RECOLL_CONFDIR=$HOME/.recoll
 
-export MYGIT=git@github.com:janck76/
-
 export RUBYLIB=.:./lib
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
+
+# Git
+export MYGIT=git@github.com:janck76/
+export OMM='origin/master..master'
+export MOM='master..origin/master'
+export OM='origin master'
 
 # oh-my-zsh vars
 
