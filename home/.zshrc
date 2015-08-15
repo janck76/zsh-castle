@@ -55,7 +55,11 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-completions src 
 
 # Load the theme.
-antigen theme robbyrussell
+if [[ $(id -u) -eq 0 ]]; then
+    antigen theme funky
+else
+    antigen theme robbyrussell
+fi
 
 # Custom stuff
 antigen bundle $HOME/.zsh_custom
