@@ -74,7 +74,7 @@ antigen apply
 
 export PATH=$HOME/.gem/ruby/2.2.0/bin:$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
-export CDPATH=~
+export CDPATH=~:/
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
