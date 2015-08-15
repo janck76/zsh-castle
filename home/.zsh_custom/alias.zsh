@@ -124,7 +124,7 @@ alias -g PE="| perl -e"
 # Konverter første kolonne fra KB til GB
 alias -g K2G='| perl -e ''grep { if ( /^(\d+)\s+(.*)/ ) { printf "%6.2fG \%s\n", $1/1024/1024, $2 } } sort { $a <=> $b} <STDIN>'''
 alias -g DN=/dev/null
-alias -g NE=2>/dev/null
+alias -g NE='2>/dev/null'
 alias -g NUL=">/dev/null 2>&1"
 
 
