@@ -94,6 +94,7 @@ alias gk='gitk --all&'
 alias gx='gitx --all'
 alias gl='git log '
 alias glo='git log --oneline'
+alias gpom='git push origin master'
 
 # systemctl aliases
 alias sc=systemctl
