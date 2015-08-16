@@ -12,6 +12,7 @@ export ZSH=$HOME/.oh-my-zsh
 export MYGIT=git@github.com:janck76/
 export OMM='origin/master..master'
 export MOM='master..origin/master'
+export OM='origin/master'
 
 # oh-my-zsh vars
 
@@ -203,9 +204,8 @@ if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
   # [[ -d $dirstack[1] ]] && cd $dirstack[1]
   # Av en eller anne grunn kommer $HOME med 2 ganger i dirstack
   # Fix:
-  pushd $HOME
-  popd
-  cd $HOME
+  popd $HOME
+  #[[ $SHLVL < 5 ]] && cd $HOME
 fi
 chpwd() {
   print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
