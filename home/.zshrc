@@ -50,7 +50,10 @@ tmux
 tmuxinator
 vi-mode
 zsh_reload
+per-directory-history
 EOFBUNDLE
+
+# Per directory history, use CTRL+G to toggle between global and per-directory history
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
