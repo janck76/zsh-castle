@@ -79,7 +79,7 @@ antigen apply
 # User configuration
 
 
-export PATH=$HOME/.gem/ruby/2.2.0/bin:$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
+export PATH=$HOME/git/git-hooks:$HOME/.gem/ruby/2.2.0/bin:$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 export CDPATH=~:/
 
@@ -219,5 +219,4 @@ DIRSTACKSIZE=20
 [[ -f ~/.zshrc_local ]] && source ~/.zshrc_local
 
 unset GREP_OPTIONS
-
-
+unset LESS

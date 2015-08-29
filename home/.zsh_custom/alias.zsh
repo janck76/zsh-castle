@@ -17,6 +17,7 @@ alias ducks='du -cksh * | sort -hr | head -11'
 alias foxit='wine "/home/janck/.wine/drive_c/Program Files/Foxit Software/Foxit Phantom/Foxit Phantom.exe"'
 alias gpghome='export GNUPGHOME=~/truecrypt/.gnupg'
 alias l='ls -1'
+alias less='less -RFX'
 alias lu='ls -lU'
 alias lf='ls -fl'
 alias lud='ls -lUd'
@@ -40,6 +41,12 @@ alias s='sudo '
 alias se='sudoedit'
 alias sshk='eval $(/usr/bin/keychain --nogui --eval --agents ssh -Q --quiet ~/.ssh/id_rsa) && ~/bin/ssh.sh'
 alias sslverify='echo|openssl s_client -port 443 -CAfile /etc/ssl/certs/ca-certificates.crt -host'
+# Eksekver kommando i zsh shell med current user sitt enviroment 
+# Kommando som skal eksevers i root context må legges inn mello fnutter
+# Eks.: zsu "prin -l /root/**/*" C
+alias suz='sudo -E zsh -c'
+# Åpne root shell med current bruker sitt environment og $SHELL
+alias sush='sudo -Es'
 alias svi='sudo -E vim'
 alias svim='sudo -E vim'
 alias tcm='truecrypt -t --fs-options=users,uid=$(id -u),gid=$(id -g),fmask=0113,dmask=0002 --mount /media/E05C-5865/keep/private.tc"" ~/truecrypt'
@@ -54,6 +61,7 @@ alias wol_brum='wol 4C:60:DE:24:DA:58'
 alias wol_nasenoff='wol 4C:60:DE:24:9F:94'
 alias omz='cd ~/.oh-my-zsh/'
 alias pdf='zathura --fork'
+alias xpwd='pwd|xsel -p;pwd'
 alias xrdm='xrdb -merge ~/.Xresources'
 alias doc="cd $DOC"
 alias usbremove="truecrypt -d && devmon -r"
@@ -96,6 +104,9 @@ alias gx='gitx --all'
 alias gl='git log '
 alias glo='git log --oneline'
 alias gpom='git push origin master'
+alias grbom='git rebase origin/master'
+alias grbi='git rebase -i'
+alias gmnff='git merge --no-ff'
 
 # systemctl aliases
 alias sc=systemctl
