@@ -36,7 +36,7 @@ COMPLETION_WAITING_DOTS="true"
 # restore
 # :w
 
-source $HOME/antigen/antigen.zsh
+source $HOME/git/antigen/antigen.zsh
 
 antigen use oh-my-zsh
 
