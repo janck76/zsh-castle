@@ -3,7 +3,8 @@ eval `tset -s rxvt-unicode-256color`
 
 export RECOLL_CONFDIR=$HOME/.recoll
 
-export RUBYLIB=.:./lib
+# Ikke støttet av rvm
+# export RUBYLIB=.:./lib
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -220,3 +221,5 @@ DIRSTACKSIZE=20
 
 unset GREP_OPTIONS
 unset LESS
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
