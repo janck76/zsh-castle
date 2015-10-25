@@ -8,6 +8,14 @@ local ret=1
 
 local howto_dir=$HOME/howto/
 
+function howto_search {
+    if which recoll &>/dev/null; then
+        recoll -t -q $words[CURRENT] |grep  "$howto_dir" | perl -ne 'print "$1\n" if(m{.*file://.*?/howto/(.*?)\]})' |sort
+    else
+        grep -lrw $words[CURRENT] ${howto_dir}* 2>/dev/null | sed "s@^${howto_dir}@@"
+    fi
+}
+
 _arguments \
     '-s[specify search pattern]:search pattern:->search' \
     "*:file:_files -W $howto_dir -g '*.(md|epub|txt|pdf|html|htm|chm|xmind)'" \
@@ -19,8 +27,8 @@ case $state in
         if [[ -d $howto_dir ]]; then
             # For at meny-completion skal funke for -s må menu enables via zsyle for howto kommandoen
             # zstyle ':completion:*:*:howto:*:*' menu on
-            compadd -U - ${(f)"$(grep -lrw $words[CURRENT] ${howto_dir}* 2>/dev/null | \
-                sed "s@^${howto_dir}@@")"} \
+            # recoll -t -q 'tcpdump' |grep  "$HOME/howto" | perl -ne 'print "$1\n" if(/.*file:\/\/(.*?)\]/)' |sort
+            compadd -U - ${(f)"$(howto_search)"} \
             && return 0
             #compadd - ${(f)"$(grep -lrw $words[CURRENT] ${howto_dir}* 2>/dev/null | \
             #    sed "s@^${howto_dir}@${words[CURRENT]}:@")"} \
