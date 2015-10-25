@@ -10,7 +10,7 @@ local howto_dir=$HOME/howto/
 
 _arguments \
     '-s[specify search pattern]:search pattern:->search' \
-    "*:file:_files -W $howto_dir -g '*.(epub|txt|pdf|html|htm|chm|xmind)'" \
+    "*:file:_files -W $howto_dir -g '*.(md|epub|txt|pdf|html|htm|chm|xmind)'" \
     && return 0
 
 case $state in
