@@ -1,4 +1,9 @@
 # Reload Completion Functions in ~/.oh-my-zsh/custom/completions
+genpasswd() {
+	l=$1
+    [[ "$l"=="" ]] && l=16
+    tr -dc A-Za-z0-9_ < /dev/urandom | head -c ${l} | xargs
+}
 
 rcf() {
   local f

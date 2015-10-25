@@ -186,7 +186,7 @@ setopt -o rc_quotes # Tillat quoting vha '', ekse echo 'hello ''world'''
 #zmodload zsh/stat
 
 # Disable deadkey (^¨~), and make ~ default
-if [[ $DISPLAY =~ :0 ]]; then
+if [[ $DISPLAY =~ :[0123456789] ]]; then
     setxkbmap no -v nodeadkeys &>/dev/null
     xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'
 fi
