@@ -10,7 +10,7 @@ local howto_dir=$HOME/howto/
 
 function howto_search {
     if which recoll &>/dev/null; then
-        recoll -t -q $words[CURRENT] |grep  "$howto_dir" | perl -ne 'print "$1\n" if(m{.*file://.*?/howto/(.*?)\]})' |sort
+        recoll -t -q "dir:$howto_dir $words[CURRENT]" | perl -ne 'print "$1\n" if(m{.*file://.*?/howto/(.*?)\]})' |sort
     else
         grep -lrw $words[CURRENT] ${howto_dir}* 2>/dev/null | sed "s@^${howto_dir}@@"
     fi
