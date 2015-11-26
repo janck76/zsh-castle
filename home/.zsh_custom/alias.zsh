@@ -108,6 +108,7 @@ alias grbom='git rebase origin/master'
 alias grbi='git rebase -i'
 alias gmnff='git merge --no-ff'
 alias reset_eth0='sudo ifconfig eth0 down; sudo ifconfig eth0 up'
+alias rsync='rsync -avh --progress'
 
 # systemctl aliases
 alias sc=systemctl

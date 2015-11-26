@@ -187,7 +187,7 @@ setopt -o rc_quotes # Tillat quoting vha '', ekse echo 'hello ''world'''
 
 # Disable deadkey (^¨~), and make ~ default
 if [[ $DISPLAY =~ :0 ]]; then
-    setxkbmap no
+    setxkbmap no -v nodeadkeys
     xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'
 fi
 
