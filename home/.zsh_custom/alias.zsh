@@ -120,6 +120,14 @@ alias scu='systemctl --user'
 alias jc='journalctl'
 alias jcx='journalctl -xe'
 
+# docker aliases
+alias dk='docker'
+alias dkx='docker exec -it'
+alias dkc='docker ps' # List running containers
+alias dkca='docker ps -a' # List all containers
+alias dki='docker images'
+alias dkip='docker inspect --format={{.NetworkSettings.IPAddress}}' # Get IP address for container
+alias dki='docker images'
 
 # Global aliases
 alias -g L="| less"
