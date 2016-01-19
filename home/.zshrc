@@ -78,9 +78,16 @@ antigen apply
 
 
 # User configuration
+[[ -z "$PERL_MB_OPT" ]] && eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
+if [[ ! $PATH =~ ".*$HOME/.rvm/bin:.*" ]]; then
+   export PATH=$HOME/.rvm/bin:$HOME/git/git-hooks:$HOME/.gem/ruby/2.2.0/bin:$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
+fi
 
-export PATH=$HOME/git/git-hooks:$HOME/.gem/ruby/2.2.0/bin:$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
+[[ ! $PATH =~ ".*$HOME/perl5/bin:.*" ]] && export PATH=$HOME/perl5/bin:$PATH
+
+#echo $PATH
+
 # export MANPATH="/usr/local/man:$MANPATH"
 export CDPATH=~:/
 
@@ -221,5 +228,3 @@ DIRSTACKSIZE=20
 
 unset GREP_OPTIONS
 unset LESS
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

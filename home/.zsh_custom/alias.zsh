@@ -94,6 +94,7 @@ alias xhd=/usr/local/bin/xhdmi
 alias pkg-update_all='packer --quickcheck|grep -v linux-ck|xargs -I{} -n1 yaourt -S {} --noconfirm'
 # Git aliases
 alias gst='git status '
+unalias gsr
 alias gad='git add '
 alias gbr='git branch '
 alias gcom='git commit'
