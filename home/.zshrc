@@ -88,6 +88,7 @@ fi
 
 #echo $PATH
 
+export PATH=$HOME/.npm-global/bin:$HOME/git/git-hooks:$HOME/.gem/ruby/2.2.0/bin:$HOME/bin:$HOME/scripts:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 export CDPATH=~:/
 
@@ -228,3 +229,6 @@ DIRSTACKSIZE=20
 
 unset GREP_OPTIONS
 unset LESS
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
