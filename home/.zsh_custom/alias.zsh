@@ -120,6 +120,10 @@ alias sci='systemctl status'
 alias scu='systemctl --user'
 alias jc='journalctl'
 alias jcx='journalctl -xe'
+# alias snippets="print -l ~/.vim/bundle/vim-snippets/{snippets,UltiSnips}/* ~/.vim/UltiSnips/*|cut -d'/' -f4-"
+# alias snip_jasmine="snippet | grep javascript-jasmine.snippets | xargs grep -h '^snippet '"
+# alias snip_angular="snippet | grep javascript-angular.snippets | xargs grep -h '^snippet '"
+# alias snip_bash="snippet | grep '/sh.snippets' | xargs grep -h '^snippet '"
 
 # docker aliases
 alias dk='docker'
@@ -154,7 +158,7 @@ alias -g NUL=">/dev/null 2>&1"
 
 # Suffix aliases
 alias -s pdf='zathura --fork'
-alias -s html=friefox
+alias -s html=firefox
 alias -s txt=vim
 
 alias gvimruby='eval $(echo gvim $(for f in $(ls **/*.rb); do echo -e "$f";done))'
