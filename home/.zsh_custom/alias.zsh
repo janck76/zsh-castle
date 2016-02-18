@@ -94,7 +94,7 @@ alias xhd=/usr/local/bin/xhdmi
 alias pkg-update_all='packer --quickcheck|grep -v linux-ck|xargs -I{} -n1 yaourt -S {} --noconfirm'
 # Git aliases
 alias gst='git status '
-unalias gsr
+unalias gsr &>/dev/null
 alias gad='git add '
 alias gbr='git branch '
 alias gcom='git commit'
@@ -110,6 +110,7 @@ alias grbi='git rebase -i'
 alias gmnff='git merge --no-ff'
 alias reset_eth0='sudo ifconfig eth0 down; sudo ifconfig eth0 up'
 alias rsync='rsync -avh --progress'
+alias mhogs='ps -A --sort -rss -o pid,comm,pmem,rss | head -n 11'
 
 # systemctl aliases
 alias sc=systemctl
