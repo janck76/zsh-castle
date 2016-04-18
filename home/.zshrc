@@ -76,7 +76,6 @@ antigen bundle $HOME/.zsh_custom/completions
 # Tell antigen that you're done.
 antigen apply
 
-
 # User configuration
 [[ -z "$PERL_MB_OPT" ]] && eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
 
@@ -114,7 +113,6 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 
 export DEFAULT_USER=$USER
-
 
 # tmux
 # ZSH_TMUX_AUTOSTART: Automatically start a tmux session upon logging in. Set to false by default.
@@ -191,16 +189,14 @@ setopt -o rc_quotes # Tillat quoting vha '', ekse echo 'hello ''world'''
 #autoload zmv
 #autoload -U age
 
-
 # Load modules
 #zmodload zsh/stat
 
 # Disable deadkey (^¨~), and make ~ default
-# Lagt til .xinitrc
-if [[ $DISPLAY =~ :[0123456789] ]]; then
-    setxkbmap no -v nodeadkeys &>/dev/null
-    xmodmap -e 'keycode  35 = asciitilde asciicircum diaeresis asciicircum diaeresis macron asciitilde'
-fi
+#  FLyttet til .xinitrc
+# if [[ $DISPLAY =~ :[0123456789] ]]; then
+#     setxkbmap no -v nodeadkeys &>/dev/null
+# fi
 
 # Remember the dirstack last visited folders
 # put new dir on the dirstck with cd or auto_cd
