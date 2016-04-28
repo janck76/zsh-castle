@@ -127,14 +127,52 @@ alias jcx='journalctl -xe'
 # alias snip_angular="snippet | grep javascript-angular.snippets | xargs grep -h '^snippet '"
 # alias snip_bash="snippet | grep '/sh.snippets' | xargs grep -h '^snippet '"
 
-# docker aliases
+# ------------------------------------
+# Docker aliases
+# ------------------------------------
 alias dk='docker'
-alias dkx='docker exec -it'
-alias dkc='docker ps' # List running containers
-alias dkca='docker ps -a' # List all containers
-alias dki='docker images'
-alias dkip='docker inspect --format={{.NetworkSettings.IPAddress}}' # Get IP address for container
-alias dki='docker images'
+
+# Get latest container ID
+alias dl="docker ps -l -q"
+
+# Get container process
+alias dps="docker ps"
+
+# Get process included stop container
+alias dpa="docker ps -a"
+
+# Get images
+alias di="docker images"
+
+# Get container IP
+alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'"
+
+# Run deamonized container, e.g., $dkd base /bin/echo hello
+alias dkd="docker run -d -P"
+
+# Run interactive container, e.g., $dki base /bin/bash
+alias dki="docker run -i -t -P"
+
+# Execute interactive container, e.g., $dex base /bin/bash
+alias dex="docker exec -i -t"
+
+# Stop all containers - se functions.zsh
+# dstop() { docker stop $(docker ps -a -q); }
+
+# Remove all containers - se functions.zsh
+# drm() { docker rm $(docker ps -a -q); }
+
+# Stop and Remove all containers
+alias drmf='docker stop $(docker ps -a -q) && docker rm -v $(docker ps -a -q)'
+
+# Remove all images - se functions.zsh - se functions.zsh
+# dri() { docker rmi $(docker images -q); }
+
+# Dockerfile build, e.g., $dbu tcnksm/test  - se functions.zsh
+# dbu() { docker build -t=0.89€ .; }
+
+# Show all alias related docker - se functions.zsh
+# dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
 
 # Global aliases
 alias -g L="| less"
