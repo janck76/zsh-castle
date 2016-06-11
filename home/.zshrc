@@ -82,7 +82,7 @@ antigen apply
 [[ -z $PATH_ORIG ]] && export PATH_ORIG=$PATH
 
 #if [[ ! $PATH =~ ".*$HOME/.rvm/bin:.*" ]]; then
-export PATH=$HOME/.npm-global/bin:$HOME/perl5/bin:$HOME/git/git-hooks:$HOME/bin:$HOME/scripts::$PATH_ORIG
+export PATH=$HOME/.npm-global/bin:$HOME/perl5/bin:$HOME/git/git-hooks:$HOME/bin:$HOME/scripts:$PATH_ORIG
 #fi
 
 #[[ ! $PATH =~ ".*$HOME/perl5/bin:.*" ]] && export PATH=$HOME/perl5/bin:$PATH
@@ -230,3 +230,6 @@ unset GREP_OPTIONS
 unset LESS
 
 #eval "$(perl -I$HOME/perl5/lib/perl5 -Mlocal::lib)"
+
+export NVM_DIR="/home/janck/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

@@ -65,6 +65,7 @@ alias pdf='zathura --fork'
 alias xpwd='pwd|xsel -p;pwd'
 alias xrdm='xrdb -merge ~/.Xresources'
 alias doc="cd $DOC"
+alias cdj='cd $JANCK'
 alias usbremove="truecrypt -d && devmon -r"
 alias history="\history"
 alias gt='translate {EN=NO}'
