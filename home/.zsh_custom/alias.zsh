@@ -113,6 +113,7 @@ alias gmnff='git merge --no-ff'
 alias reset_eth0='sudo ifconfig eth0 down; sudo ifconfig eth0 up'
 alias rsync='rsync -avh --progress'
 alias mhogs='ps -A --sort -rss -o pid,comm,pmem,rss | head -n 11'
+alias pubip='wget -qO- http://ipinfo.io/ip'
 
 # systemctl aliases
 alias sc=systemctl
