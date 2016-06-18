@@ -114,6 +114,7 @@ alias reset_eth0='sudo ifconfig eth0 down; sudo ifconfig eth0 up'
 alias rsync='rsync -avh --progress'
 alias mhogs='ps -A --sort -rss -o pid,comm,pmem,rss | head -n 11'
 alias pubip='wget -qO- http://ipinfo.io/ip'
+alias ya=yaourt
 
 # systemctl aliases
 alias sc=systemctl
@@ -204,3 +205,4 @@ alias -s html=firefox
 alias -s txt=vim
 
 alias gvimruby='eval $(echo gvim $(for f in $(ls **/*.rb); do echo -e "$f";done))'
+alias xx='xclip -selection primary </dev/null; xclip -selection secondary </dev/null; xclip -selection clipboard </dev/null; xclip -selection buffer-cut </dev/null'
