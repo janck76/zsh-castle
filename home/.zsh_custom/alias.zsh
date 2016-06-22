@@ -100,6 +100,7 @@ unalias gsr &>/dev/null
 alias gad='git add '
 alias gbr='git branch '
 alias gcom='git commit'
+alias gamend='git commit --amend --no-edit'
 alias gdif='git diff'
 alias go='git checkout '
 alias gk='gitk --all&'
