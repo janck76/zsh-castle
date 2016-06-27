@@ -126,6 +126,7 @@ alias sci='systemctl status'
 alias scu='systemctl --user'
 alias jc='journalctl'
 alias jcx='journalctl -xe'
+alias psc='ps xawf -eo pid,user,cgroup,args'
 # alias snippets="print -l ~/.vim/bundle/vim-snippets/{snippets,UltiSnips}/* ~/.vim/UltiSnips/*|cut -d'/' -f4-"
 # alias snip_jasmine="snippet | grep javascript-jasmine.snippets | xargs grep -h '^snippet '"
 # alias snip_angular="snippet | grep javascript-angular.snippets | xargs grep -h '^snippet '"
