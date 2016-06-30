@@ -98,6 +98,8 @@ alias pkg-update_all='packer --quickcheck|grep -v linux-ck|xargs -I{} -n1 yaourt
 alias gst='git status '
 unalias gsr &>/dev/null
 alias gad='git add '
+alias gau='git add -u'
+alias gaa='git add -A'
 alias gbr='git branch '
 alias gcom='git commit'
 alias gamend='git commit --amend --no-edit'
