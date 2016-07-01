@@ -100,8 +100,10 @@ unalias gsr &>/dev/null
 alias gad='git add '
 alias gau='git add -u'
 alias gaa='git add -A'
+alias gap='git add -p'
 alias gbr='git branch '
 alias gcom='git commit'
+alias gcomm='git commit -m'
 alias gamend='git commit --amend --no-edit'
 alias gdif='git diff'
 alias go='git checkout '
@@ -118,6 +120,7 @@ alias rsync='rsync -avh --progress'
 alias mhogs='ps -A --sort -rss -o pid,comm,pmem,rss | head -n 11'
 alias pubip='wget -qO- http://ipinfo.io/ip'
 alias ya=yaourt
+alias perls='perl -MSmart::Comments'
 
 # systemctl aliases
 alias sc=systemctl
