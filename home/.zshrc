@@ -233,3 +233,7 @@ unset LESS
 
 export NVM_DIR="/home/janck/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Fjern Ctrl-s og Ctrl-q
+stty stop undef
+stty start undef
