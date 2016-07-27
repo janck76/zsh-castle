@@ -62,6 +62,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # Additional completion definitions for Zsh.
 antigen bundle zsh-users/zsh-completions src 
 
+antigen bundle zsh-users/zsh-autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=blue'
+
 # Load the theme.
 if [[ $(id -u) -eq 0 ]]; then
     antigen theme funky
