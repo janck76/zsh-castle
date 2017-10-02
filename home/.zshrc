@@ -2,6 +2,7 @@
 eval `tset -s rxvt-unicode-256color`
 
 export RECOLL_CONFDIR=$HOME/.recoll
+export HOSTNAME=$(hostname)
 
 # Ikke støttet av rvm
 # export RUBYLIB=.:./lib
@@ -51,8 +52,8 @@ tmux
 tmuxinator
 vi-mode
 zsh_reload
-per-directory-history
 EOFBUNDLE
+#per-directory-history
 
 # Per directory history, use CTRL+G to toggle between global and per-directory history
 
@@ -221,6 +222,7 @@ if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
   popd $HOME
   #[[ $SHLVL < 5 ]] && cd $HOME
 fi
+
 chpwd() {
   print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
 }

@@ -40,7 +40,8 @@ tdk() {
 }
 
 source_keychain() {
-    /usr/bin/keychain --systemd -q $(print $HOME/.ssh/id_*~*pub*)
+    #/usr/bin/keychain --systemd -q $(print $HOME/.ssh/id_*~*pub*)
+    /usr/bin/keychain -q $(print $HOME/.ssh/id_*~*pub*)
     source $HOME/.keychain/${HOST}-sh
 }
 
