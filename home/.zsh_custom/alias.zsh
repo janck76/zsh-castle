@@ -208,7 +208,7 @@ alias -g NUL=">/dev/null 2>&1"
 
 # Suffix aliases
 alias -s pdf='zathura --fork'
-alias -s html=firefox
+alias -s html=chromium
 alias -s txt=vim
 
 alias gvimruby='eval $(echo gvim $(for f in $(ls **/*.rb); do echo -e "$f";done))'

@@ -40,7 +40,7 @@ COMPLETION_WAITING_DOTS="true"
 
 source $HOME/git/antigen/antigen.zsh
 
-antigen use oh-my-zsh
+antigen use oh-my-zsh &>/tmp/.oh-my-zsh || cat /tmp/.oh-my-zsh 1>&2
 
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundles <<EOFBUNDLE
@@ -86,7 +86,7 @@ antigen apply
 [[ -z $PATH_ORIG ]] && export PATH_ORIG=$PATH
 
 #if [[ ! $PATH =~ ".*$HOME/.rvm/bin:.*" ]]; then
-export PATH=$HOME/.npm-global/bin:$HOME/perl5/bin:$HOME/git/git-hooks:$HOME/bin:$HOME/scripts:$PATH_ORIG
+export PATH=$HOME/.config/yarn/global/node_modules/.bin:$HOME/.npm-global/bin:$HOME/perl5/bin:$HOME/git/git-hooks:$HOME/bin:$HOME/scripts:$PATH_ORIG
 #fi
 
 #[[ ! $PATH =~ ".*$HOME/perl5/bin:.*" ]] && export PATH=$HOME/perl5/bin:$PATH
